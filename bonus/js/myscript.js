@@ -25,35 +25,25 @@ let itemLists = ``;
 }*/
 
 // creo il ciclo while per stampare nel DOM gli elementi dell'array
-// let i = 0;
-// while (i < groceryShopping.length) {
-//     itemLists += `
-//     <li> ${groceryShopping[i]} </li>`;
-//     console.log(itemLists);
-//     i++;
-// }
+let i = 0;
+while (i < groceryShopping.length) {
+    itemLists += `
+    <li> ${groceryShopping[i]} </li>`;
+    console.log(itemLists);
+    i++;
+}
 
 // BONUS
-// creo il do while 
+// creo la funzione per far inserire agli user altri elementi
 const addElement = document.getElementById("addElement");
 
-let i= 0;
-
-do {
-    addElement.addEventListener("click",
-        function() {
-            const nameElement = document.getElementById("nameElement");
-            console.log(nameElement.value);
-            groceryShopping.push(nameElement.value);
-        }
-    )
-} while (i < groceryShopping.length) {
-        itemLists += `
-        <li> ${groceryShopping[i]} </li>`;
-        console.log(itemLists);
-        i++;
-}
+addElement.addEventListener("click",
+    function() {
+        const nameElement = document.getElementById("nameElement");
+        console.log(nameElement.value);
+        groceryShopping.push(nameElement.value);
+    }
+);
 
 // stampo gli elementi dell'array nel DOM
 ulListElement.innerHTML += itemLists;
-
