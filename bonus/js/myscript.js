@@ -33,6 +33,9 @@ while (i < groceryShopping.length) {
     i++;
 }
 
+// stampo gli elementi dell'array nel DOM
+ulListElement.innerHTML += itemLists;
+
 // BONUS
 // creo la funzione per far inserire agli user altri elementi
 const addElement = document.getElementById("addElement");
@@ -42,8 +45,8 @@ addElement.addEventListener("click",
         const nameElement = document.getElementById("nameElement");
         console.log(nameElement.value);
         groceryShopping.push(nameElement.value);
+        let elementLi = document.createElement("li");
+        elementLi.append(nameElement.value);
+        ulListElement.appendChild(elementLi);
     }
 );
-
-// stampo gli elementi dell'array nel DOM
-ulListElement.innerHTML += itemLists;
