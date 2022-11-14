@@ -1,0 +1,14 @@
+/* general rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #5800FF;
+    color: #72FFFF;
+    width: 500px;
+    margin: 200px auto;
+    border-radius: 30px;
+}
