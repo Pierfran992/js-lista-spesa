@@ -45,8 +45,10 @@ addElement.addEventListener("click",
         const nameElement = document.getElementById("nameElement");
         console.log(nameElement.value);
         groceryShopping.push(nameElement.value);
-        let elementLi = document.createElement("li");
-        elementLi.append(nameElement.value);
-        ulListElement.appendChild(elementLi);
+        itemLists = document.createElement("li");
+        itemLists.append(nameElement.value);
+        ulListElement.appendChild(itemLists);
     }
 );
+// ERRORE: HO CREATO DUE COSTANTI (OVVERO elementLi e itemList) PER FARE LA STESSA COSA OVVERO CREARE UN COMPONENTE 
+// li ALL'INTERNO DELL'ul (ERRORE CORRETTO)
